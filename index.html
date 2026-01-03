@@ -1,164 +1,163 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- GOOGLE SEARCH CONSOLE -->
-    <!-- Cole aqui quando o Google gerar -->
-    <!--
-    <meta name="google-site-verification" content="COLE_AQUI">
-    -->
+<!-- GOOGLE SEARCH CONSOLE -->
+<!-- <meta name="google-site-verification" content="COLE_AQUI"> -->
 
-    <!-- SEO -->
-    <title>Suporte em TI no Rio de Janeiro | Átomo Service Informática</title>
-    <meta name="description" content="Suporte técnico em TI no Rio de Janeiro. Firewall, redes, cabeamento estruturado, infraestrutura e suporte presencial e remoto para empresas.">
+<!-- SEO PRINCIPAL -->
+<title>Suporte em TI no RJ | Átomo Service Informática</title>
+<meta name="description" content="Suporte técnico em TI no Rio de Janeiro. Firewall, redes, servidores, cabeamento estruturado e suporte presencial e remoto para empresas.">
+<meta name="author" content="Átomo Service Informática">
 
-    <!-- FONT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<!-- FONTE -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- ICONS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- ÍCONES -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- SCHEMA.ORG -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Átomo Service Informática",
-      "image": "https://fabio26250320.github.io/atomoservice-site/imagens/logoatomo_1.jpeg",
-      "telephone": "+5521979450236",
-      "email": "atomoserviceinformatica@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Rio de Janeiro",
-        "addressRegion": "RJ",
-        "addressCountry": "BR"
-      },
-      "url": "https://fabio26250320.github.io/atomoservice-site/"
-    }
-    </script>
+<!-- SEO LOCAL -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Átomo Service Informática",
+  "image": "https://fabio26250320.github.io/atomoservice-site/imagens/logo-atomo.jpeg",
+  "telephone": "+5521979450236",
+  "email": "atomoserviceinformatica@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Rio de Janeiro",
+    "addressRegion": "RJ",
+    "addressCountry": "BR"
+  },
+  "url": "https://fabio26250320.github.io/atomoservice-site/"
+}
+</script>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Inter', sans-serif;
-            background: #f4f6f8;
-            color: #222;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
 
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: #0b1c2d;
-            padding: 12px 40px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            z-index: 1000;
-        }
+/* MENU */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #0b1c2d;
+    padding: 12px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
 
-        header img {
-            height: 45px;
-        }
+header img {
+    height: 42px;
+}
 
-        nav a {
-            color: #ffffff;
-            margin-left: 20px;
-            text-decoration: none;
-            font-weight: 500;
-        }
+nav a {
+    color: #fff;
+    margin-left: 24px;
+    text-decoration: none;
+    font-weight: 500;
+}
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+/* SEÇÕES */
+section {
+    padding: 110px 40px 60px;
+    max-width: 1100px;
+    margin: auto;
+}
 
-        section {
-            padding: 100px 40px 60px;
-            max-width: 1100px;
-            margin: auto;
-        }
+.hero {
+    text-align: center;
+    background: #ffffff;
+    padding-top: 160px;
+}
 
-        .hero {
-            padding-top: 140px;
-            text-align: center;
-            background: #ffffff;
-        }
+h1, h2, h3 {
+    color: #0b1c2d;
+}
 
-        h1, h2 {
-            color: #0b1c2d;
-        }
+/* SERVIÇOS */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
 
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
 
-        .card {
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-        }
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
 
-        ul {
-            padding-left: 20px;
-        }
+.card-content {
+    padding: 18px;
+}
 
-        form {
-            display: grid;
-            gap: 12px;
-            max-width: 500px;
-        }
+/* FORMULÁRIO */
+form {
+    max-width: 520px;
+    display: grid;
+    gap: 12px;
+}
 
-        input, textarea, button {
-            padding: 12px;
-            font-size: 15px;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-        }
+input, textarea, button {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
 
-        button {
-            background: #0b1c2d;
-            color: #ffffff;
-            border: none;
-            cursor: pointer;
-        }
+button {
+    background: #0b1c2d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
 
-        footer {
-            background: #0b1c2d;
-            color: #ffffff;
-            text-align: center;
-            padding: 20px;
-        }
+/* RODAPÉ */
+footer {
+    background: #0b1c2d;
+    color: #fff;
+    text-align: center;
+    padding: 22px;
+}
 
-        .whatsapp {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background: #25d366;
-            color: #ffffff;
-            padding: 14px 16px;
-            border-radius: 50%;
-            font-size: 26px;
-            text-decoration: none;
-            z-index: 999;
-        }
-
-        .whatsapp:hover {
-            background: #1ebe5d;
-        }
-    </style>
+/* WHATSAPP */
+.whatsapp {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25d366;
+    color: #fff;
+    padding: 15px 17px;
+    border-radius: 50%;
+    font-size: 26px;
+    z-index: 999;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <img src="imagens/logoatomo_1.jpeg" alt="Átomo Service Informática">
+    <img src="imagens/logo-atomo.jpeg" alt="Átomo Service Informática">
     <nav>
         <a href="#inicio">Início</a>
         <a href="#servicos">Serviços</a>
@@ -170,81 +169,74 @@
 <section id="inicio" class="hero">
     <h1>Átomo Service Informática</h1>
     <p>
-        Atendemos empresas e instituições de ensino no <strong>Rio de Janeiro</strong>,
-        oferecendo suporte técnico em TI, firewall, redes, cabeamento estruturado
-        e infraestrutura de tecnologia da informação.
+        Soluções completas em Tecnologia da Informação para empresas no
+        <strong>Rio de Janeiro</strong>.
     </p>
 </section>
 
 <section id="servicos">
-    <h2>Serviços de TI</h2>
+<h2>Serviços</h2>
 
-    <div class="services">
-        <div class="card">
-            <h3>Suporte Técnico Presencial e Remoto</h3>
-            <p>Atendimento rápido para empresas no Rio de Janeiro, com suporte remoto e presencial para manutenção, formatação e correção de falhas.</p>
-        </div>
+<div class="services">
 
-        <div class="card">
-            <h3>Firewall e Segurança da Informação</h3>
-            <p>Configuração e gerenciamento de firewall, controle de acessos, VPN e proteção contra ameaças e invasões.</p>
-        </div>
+<div class="card">
+<img src="imagens/manutencao-servidores.jpg" alt="Suporte técnico e manutenção de servidores">
+<div class="card-content">
+<h3>Suporte Técnico</h3>
+<p>Atendimento presencial e remoto para manutenção, formatação e suporte corporativo.</p>
+</div>
+</div>
 
-        <div class="card">
-            <h3>Administração de Redes e Sistemas</h3>
-            <p>Gerenciamento de redes corporativas, servidores, usuários, permissões e monitoramento de infraestrutura.</p>
-        </div>
+<div class="card">
+<img src="imagens/firewall-seguranca.jpg" alt="Firewall e segurança da informação">
+<div class="card-content">
+<h3>Firewall e Segurança</h3>
+<p>Proteção de redes, VPN, controle de acessos e prevenção contra ataques.</p>
+</div>
+</div>
 
-        <div class="card">
-            <h3>Infraestrutura e Cabeamento Estruturado</h3>
-            <p>Planejamento, instalação e organização de cabeamento estruturado para redes de dados, voz e fibra óptica.</p>
-        </div>
+<div class="card">
+<img src="imagens/redes-servidores.jpg" alt="Administração de redes e servidores">
+<div class="card-content">
+<h3>Redes e Servidores</h3>
+<p>Administração de redes, servidores, usuários e monitoramento.</p>
+</div>
+</div>
 
-        <div class="card">
-            <h3>Fibra Óptica</h3>
-            <p>Instalação e manutenção de enlaces em fibra óptica para ambientes corporativos.</p>
-        </div>
-
-        <div class="card">
-            <h3>Consultoria em TI</h3>
-            <p>Análise de ambiente, melhoria de desempenho, redução de custos e planejamento tecnológico.</p>
-        </div>
-
-        <div class="card">
-            <h3>CFTV</h3>
-            <p>Implantação e suporte de sistemas de monitoramento por câmeras para segurança empresarial.</p>
-        </div>
-    </div>
+</div>
 </section>
 
 <section id="clientes">
-    <h2>Clientes Atendidos</h2>
-    <p>Experiência comprovada em instituições de ensino e ambientes corporativos.</p>
-    <ul>
-        <li>Colégio Pinheiro Guimarães</li>
-        <li>Colégio Galileu Galilei</li>
-    </ul>
+<h2>Clientes Atendidos</h2>
+<ul>
+<li>Instituições Educacionais</li>
+<li>Empresas de Transporte</li>
+<li>Comércio e Shopping Centers</li>
+</ul>
 </section>
 
 <section id="contato">
-    <h2>Contato</h2>
-    <form action="https://formspree.io/f/SEU_ID_AQUI" method="POST">
-        <input type="text" name="nome" placeholder="Nome" required>
-        <input type="email" name="email" placeholder="E-mail" required>
-        <textarea name="mensagem" placeholder="Mensagem" rows="4" required></textarea>
-        <button type="submit">Enviar</button>
-    </form>
+<h2>Contato</h2>
+
+<form action="https://formspree.io/f/SEU_ID_AQUI" method="POST">
+<input type="text" name="nome" placeholder="Nome" required>
+<input type="email" name="email" placeholder="E-mail" required>
+<textarea name="mensagem" placeholder="Mensagem" rows="4" required></textarea>
+<button type="submit">Enviar</button>
+</form>
+
 </section>
 
 <footer>
-    <p>© 2026 Átomo Service Informática — Rio de Janeiro</p>
-    <p>WhatsApp: (21) 97945-0236 | atomoserviceinformatica@gmail.com</p>
+<p>© 2026 Átomo Service Informática — Rio de Janeiro</p>
+<p>WhatsApp: (21) 97945-0236</p>
 </footer>
 
 <a class="whatsapp" href="https://wa.me/5521979450236" target="_blank">
-    <i class="fab fa-whatsapp"></i>
+<i class="fab fa-whatsapp"></i>
 </a>
 
 </body>
 </html>
+
 
