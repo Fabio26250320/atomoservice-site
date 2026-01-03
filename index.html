@@ -6,42 +6,17 @@
 
     <title>Suporte em TI no RJ | Átomo Service Informática</title>
 
-    <!-- SEO -->
     <meta name="description" content="Suporte técnico em TI no Rio de Janeiro. Firewall, redes, servidores, cabeamento estruturado e suporte presencial e remoto para empresas.">
     <meta name="author" content="Átomo Service Informática">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <!-- SEO LOCAL -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Átomo Service Informática",
-      "image": "https://fabio26250320.github.io/atomoservice-site/imagens/logoatomo1.jpg",
-      "telephone": "+5521979450236",
-      "email": "atomoserviceinformatica@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Rio de Janeiro",
-        "addressRegion": "RJ",
-        "addressCountry": "BR"
-      },
-      "url": "https://fabio26250320.github.io/atomoservice-site/"
-    }
-    </script>
 </head>
 
 <body>
-
-<div class="logo-watermark"></div>
 
 <header>
     <img src="imagens/logoatomo1.jpg" alt="Átomo Service Informática">
@@ -55,114 +30,61 @@
 
 <section id="inicio" class="hero">
     <h1>Átomo Service Informática</h1>
-    <p>
-        Soluções completas em Tecnologia da Informação para empresas no
-        <strong>Rio de Janeiro</strong>.
-    </p>
+    <p>Soluções completas em Tecnologia da Informação para empresas no <strong>Rio de Janeiro</strong>.</p>
 </section>
 
 <section id="servicos">
     <h2>Serviços</h2>
 
     <div class="services">
-
         <div class="card">
-            <img src="imagens/manutencao-servidores.jpg" alt="Suporte técnico em TI">
+            <img src="imagens/manutencao-servidores.jpg">
             <div class="card-content">
-                <h3>Suporte Técnico Presencial e Remoto</h3>
-                <p>
-                    Atendimento ágil para manutenção de computadores, formatações,
-                    resolução de problemas e suporte contínuo.
-                </p>
+                <h3>Suporte Técnico</h3>
+                <p>Manutenção, formatação e suporte presencial e remoto.</p>
             </div>
         </div>
 
         <div class="card">
-            <img src="imagens/firewall-seguranca.jpg" alt="Firewall e segurança da informação">
+            <img src="imagens/firewall-seguranca.jpg">
             <div class="card-content">
-                <h3>Firewall e Segurança da Informação</h3>
-                <p>
-                    Implementação de firewall, VPN, controle de acessos e proteção
-                    contra ameaças e invasões.
-                </p>
+                <h3>Firewall e Segurança</h3>
+                <p>Proteção de rede, VPN e controle de acessos.</p>
             </div>
         </div>
 
         <div class="card">
-            <img src="imagens/redes-servidores.jpg" alt="Redes e servidores">
+            <img src="imagens/redes-servidores.jpg">
             <div class="card-content">
-                <h3>Redes, Servidores e Infraestrutura</h3>
-                <p>
-                    Administração de redes corporativas, servidores,
-                    cabeamento estruturado e infraestrutura de TI.
-                </p>
+                <h3>Infraestrutura</h3>
+                <p>Redes, servidores e cabeamento estruturado.</p>
             </div>
         </div>
-
     </div>
 </section>
 
 <section id="clientes">
-    <h2>Clientes e Segmentos Atendidos</h2>
-
-    <p>
-        A Átomo Service Informática atua no suporte e na gestão de ambientes de
-        Tecnologia da Informação para empresas e instituições de diferentes segmentos,
-        com foco em segurança, estabilidade e continuidade dos serviços.
-    </p>
-
-    <ul>
-        <li><strong>Instituições de ensino</strong> — laboratórios, redes administrativas e servidores.</li>
-        <li><strong>Empresas de serviços</strong> — suporte contínuo e administração de redes.</li>
-        <li><strong>Comércio e varejo</strong> — infraestrutura de TI e conectividade.</li>
-        <li><strong>Condomínios e administradoras</strong> — redes, internet e controle de acessos.</li>
-        <li><strong>Logística e transporte</strong> — ambientes críticos e conectividade.</li>
-        <li><strong>Escritórios administrativos</strong> — suporte em TI e segurança da informação.</li>
-    </ul>
+    <h2>Clientes</h2>
+    <p>Atendemos empresas, escolas, comércios, condomínios e escritórios.</p>
 </section>
 
 <section id="contato">
     <h2>Contato</h2>
-
     <form action="https://formspree.io/f/xaqndrqw" method="POST">
-
         <input type="text" name="nome" placeholder="Nome" required>
-
         <input type="email" name="email" placeholder="E-mail" required>
-
-        <select name="tipo_empresa" required>
-            <option value="">Tipo de empresa</option>
-            <option>Instituição de ensino</option>
-            <option>Empresa de serviços</option>
-            <option>Comércio / Varejo</option>
-            <option>Condomínio</option>
-            <option>Outro</option>
-        </select>
-
-        <select name="necessidade" required>
-            <option value="">Principal necessidade</option>
-            <option>Suporte técnico</option>
-            <option>Firewall / Segurança</option>
-            <option>Redes / Infraestrutura</option>
-            <option>Manutenção de computadores</option>
-        </select>
-
-        <textarea name="mensagem" rows="4" placeholder="Descreva brevemente sua necessidade" required></textarea>
-
+        <textarea name="mensagem" placeholder="Mensagem" required></textarea>
         <button type="submit">Enviar</button>
     </form>
 </section>
 
 <footer>
     <p>© 2026 Átomo Service Informática — Rio de Janeiro</p>
-    <p>WhatsApp: (21) 97945-0236</p>
 </footer>
 
-<!-- WHATSAPP COM MENSAGEM AUTOMÁTICA -->
 <a class="whatsapp"
-   href="https://wa.me/5521979450236?text=Olá,%20gostaria%20de%20informações%20sobre%20suporte%20em%20TI%20para%20minha%20empresa."
-   target="_blank"
-   aria-label="WhatsApp">
+   href="https://wa.me/5521979450236"
+   target="_blank">
     <i class="fab fa-whatsapp"></i>
 </a>
 

@@ -10,23 +10,6 @@ body {
     background: #f4f6f8;
     color: #222;
     overflow-x: hidden;
-    position: relative;
-    z-index: 1;
-}
-
-/* LOGO WATERMARK (FUNDO TRANSPARENTE) */
-.logo-watermark {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 420px;
-    height: 420px;
-    background: url('imagens/logoatomo1.jpg') no-repeat center;
-    background-size: contain;
-    opacity: 0.04;
-    transform: translate(-50%, -50%);
-    z-index: 0;
-    pointer-events: none;
 }
 
 /* HEADER */
@@ -86,6 +69,28 @@ section {
     background: #ffffff;
     padding-top: 160px;
     border-radius: 12px;
+}
+
+/* ===== FUNDO COM LOGO (APENAS DE SERVIÇOS PARA BAIXO) ===== */
+#servicos::before,
+#clientes::before,
+#contato::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("imagens/logoatomo1.jpg") no-repeat center;
+    background-size: contain;
+    opacity: 0.035;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* GARANTE CONTEÚDO ACIMA DO FUNDO */
+#servicos > *,
+#clientes > *,
+#contato > * {
+    position: relative;
+    z-index: 2;
 }
 
 /* SERVIÇOS */
@@ -153,8 +158,6 @@ footer {
     color: #ffffff;
     text-align: center;
     padding: 22px;
-    position: relative;
-    z-index: 2;
 }
 
 /* BOTÃO WHATSAPP */
@@ -178,7 +181,6 @@ footer {
 
 /* RESPONSIVO */
 @media (max-width: 768px) {
-
     header {
         flex-direction: column;
         align-items: center;
@@ -193,9 +195,10 @@ footer {
         padding-top: 180px;
     }
 
-    .logo-watermark {
-        width: 280px;
-        height: 280px;
-        opacity: 0.03;
+    #servicos::before,
+    #clientes::before,
+    #contato::before {
+        background-size: 80%;
+        opacity: 0.025;
     }
 }
