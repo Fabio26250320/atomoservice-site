@@ -10,6 +10,23 @@ body {
     background: #f4f6f8;
     color: #222;
     overflow-x: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+/* LOGO WATERMARK (FUNDO TRANSPARENTE) */
+.logo-watermark {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 420px;
+    height: 420px;
+    background: url('imagens/logoatomo1.jpg') no-repeat center;
+    background-size: contain;
+    opacity: 0.04;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    pointer-events: none;
 }
 
 /* HEADER */
@@ -25,7 +42,7 @@ header {
     z-index: 1000;
 }
 
-/* LOGO */
+/* LOGO HEADER */
 header img {
     max-height: 48px;
     max-width: 180px;
@@ -35,7 +52,6 @@ header img {
     flex-shrink: 0;
     display: block;
 }
-
 
 /* MENU */
 nav {
@@ -51,11 +67,17 @@ nav a {
     white-space: nowrap;
 }
 
+nav a:hover {
+    text-decoration: underline;
+}
+
 /* SEÇÕES */
 section {
     padding: 110px 20px 60px;
     max-width: 1100px;
     margin: auto;
+    position: relative;
+    z-index: 2;
 }
 
 /* HERO */
@@ -63,6 +85,7 @@ section {
     text-align: center;
     background: #ffffff;
     padding-top: 160px;
+    border-radius: 12px;
 }
 
 /* SERVIÇOS */
@@ -77,6 +100,11 @@ section {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
 }
 
 .card img {
@@ -98,11 +126,13 @@ form {
 
 input,
 textarea,
+select,
 button {
     padding: 12px;
     border-radius: 6px;
     border: 1px solid #ccc;
     font-size: 15px;
+    font-family: 'Inter', sans-serif;
 }
 
 button {
@@ -110,6 +140,11 @@ button {
     color: #ffffff;
     border: none;
     cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: #123254;
 }
 
 /* FOOTER */
@@ -118,6 +153,8 @@ footer {
     color: #ffffff;
     text-align: center;
     padding: 22px;
+    position: relative;
+    z-index: 2;
 }
 
 /* BOTÃO WHATSAPP */
@@ -131,4 +168,34 @@ footer {
     border-radius: 50%;
     font-size: 26px;
     z-index: 999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    transition: transform 0.2s ease;
+}
+
+.whatsapp:hover {
+    transform: scale(1.08);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .hero {
+        padding-top: 180px;
+    }
+
+    .logo-watermark {
+        width: 280px;
+        height: 280px;
+        opacity: 0.03;
+    }
 }
