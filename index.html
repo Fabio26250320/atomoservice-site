@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- GOOGLE SEARCH CONSOLE (cole seu código quando gerar) -->
+    <!-- GOOGLE SEARCH CONSOLE -->
+    <!-- Cole aqui quando o Google gerar -->
     <!--
     <meta name="google-site-verification" content="COLE_AQUI">
     -->
@@ -13,7 +14,7 @@
     <title>Suporte em TI no Rio de Janeiro | Átomo Service Informática</title>
     <meta name="description" content="Suporte técnico em TI no Rio de Janeiro. Firewall, redes, cabeamento estruturado, infraestrutura e suporte presencial e remoto para empresas.">
 
-    <!-- FONTS -->
+    <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -44,8 +45,8 @@
         body {
             margin: 0;
             font-family: 'Inter', sans-serif;
+            background: #f4f6f8;
             color: #222;
-            background: #f5f6f8;
         }
 
         header {
@@ -65,7 +66,7 @@
         }
 
         nav a {
-            color: #fff;
+            color: #ffffff;
             margin-left: 20px;
             text-decoration: none;
             font-weight: 500;
@@ -81,14 +82,14 @@
             margin: auto;
         }
 
-        h1, h2 {
-            color: #0b1c2d;
+        .hero {
+            padding-top: 140px;
+            text-align: center;
+            background: #ffffff;
         }
 
-        .hero {
-            background: #ffffff;
-            text-align: center;
-            padding-top: 140px;
+        h1, h2 {
+            color: #0b1c2d;
         }
 
         .services {
@@ -104,9 +105,14 @@
             box-shadow: 0 2px 6px rgba(0,0,0,0.08);
         }
 
+        ul {
+            padding-left: 20px;
+        }
+
         form {
             display: grid;
             gap: 12px;
+            max-width: 500px;
         }
 
         input, textarea, button {
@@ -118,30 +124,29 @@
 
         button {
             background: #0b1c2d;
-            color: #fff;
+            color: #ffffff;
             border: none;
             cursor: pointer;
         }
 
         footer {
             background: #0b1c2d;
-            color: #fff;
+            color: #ffffff;
             text-align: center;
             padding: 20px;
         }
 
-        /* WhatsApp Button */
         .whatsapp {
             position: fixed;
             bottom: 25px;
             right: 25px;
             background: #25d366;
-            color: #fff;
+            color: #ffffff;
             padding: 14px 16px;
             border-radius: 50%;
             font-size: 26px;
-            z-index: 999;
             text-decoration: none;
+            z-index: 999;
         }
 
         .whatsapp:hover {
@@ -157,11 +162,12 @@
     <nav>
         <a href="#inicio">Início</a>
         <a href="#servicos">Serviços</a>
+        <a href="#clientes">Clientes</a>
         <a href="#contato">Contato</a>
     </nav>
 </header>
 
-<section class="hero" id="inicio">
+<section id="inicio" class="hero">
     <h1>Átomo Service Informática</h1>
     <p>
         Atendemos empresas e instituições de ensino no <strong>Rio de Janeiro</strong>,
@@ -171,21 +177,58 @@
 </section>
 
 <section id="servicos">
-    <h2>Serviços</h2>
+    <h2>Serviços de TI</h2>
+
     <div class="services">
-        <div class="card">Suporte Técnico Presencial e Remoto</div>
-        <div class="card">Firewall e Segurança da Informação</div>
-        <div class="card">Administração de Redes e Sistemas</div>
-        <div class="card">Infraestrutura e Cabeamento Estruturado</div>
-        <div class="card">Fibra Óptica</div>
-        <div class="card">Consultoria em TI</div>
-        <div class="card">CFTV</div>
+        <div class="card">
+            <h3>Suporte Técnico Presencial e Remoto</h3>
+            <p>Atendimento rápido para empresas no Rio de Janeiro, com suporte remoto e presencial para manutenção, formatação e correção de falhas.</p>
+        </div>
+
+        <div class="card">
+            <h3>Firewall e Segurança da Informação</h3>
+            <p>Configuração e gerenciamento de firewall, controle de acessos, VPN e proteção contra ameaças e invasões.</p>
+        </div>
+
+        <div class="card">
+            <h3>Administração de Redes e Sistemas</h3>
+            <p>Gerenciamento de redes corporativas, servidores, usuários, permissões e monitoramento de infraestrutura.</p>
+        </div>
+
+        <div class="card">
+            <h3>Infraestrutura e Cabeamento Estruturado</h3>
+            <p>Planejamento, instalação e organização de cabeamento estruturado para redes de dados, voz e fibra óptica.</p>
+        </div>
+
+        <div class="card">
+            <h3>Fibra Óptica</h3>
+            <p>Instalação e manutenção de enlaces em fibra óptica para ambientes corporativos.</p>
+        </div>
+
+        <div class="card">
+            <h3>Consultoria em TI</h3>
+            <p>Análise de ambiente, melhoria de desempenho, redução de custos e planejamento tecnológico.</p>
+        </div>
+
+        <div class="card">
+            <h3>CFTV</h3>
+            <p>Implantação e suporte de sistemas de monitoramento por câmeras para segurança empresarial.</p>
+        </div>
     </div>
+</section>
+
+<section id="clientes">
+    <h2>Clientes Atendidos</h2>
+    <p>Experiência comprovada em instituições de ensino e ambientes corporativos.</p>
+    <ul>
+        <li>Colégio Pinheiro Guimarães</li>
+        <li>Colégio Galileu Galilei</li>
+    </ul>
 </section>
 
 <section id="contato">
     <h2>Contato</h2>
-    <form action="https://formspree.io/f/xaqndrqw" method="POST">
+    <form action="https://formspree.io/f/SEU_ID_AQUI" method="POST">
         <input type="text" name="nome" placeholder="Nome" required>
         <input type="email" name="email" placeholder="E-mail" required>
         <textarea name="mensagem" placeholder="Mensagem" rows="4" required></textarea>
