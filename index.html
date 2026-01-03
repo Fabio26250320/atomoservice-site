@@ -110,11 +110,11 @@
     </p>
 
     <ul>
-        <li><strong>Instituições de ensino</strong> — suporte a laboratórios de informática, redes administrativas e servidores.</li>
-        <li><strong>Empresas de serviços</strong> — suporte técnico contínuo e administração de redes.</li>
-        <li><strong>Comércio e varejo</strong> — apoio à infraestrutura de TI e conectividade.</li>
-        <li><strong>Condomínios e administradoras</strong> — suporte à rede, internet e controle de acessos.</li>
-        <li><strong>Logística e transporte</strong> — suporte a ambientes críticos e conectividade.</li>
+        <li><strong>Instituições de ensino</strong> — laboratórios, redes administrativas e servidores.</li>
+        <li><strong>Empresas de serviços</strong> — suporte contínuo e administração de redes.</li>
+        <li><strong>Comércio e varejo</strong> — infraestrutura de TI e conectividade.</li>
+        <li><strong>Condomínios e administradoras</strong> — redes, internet e controle de acessos.</li>
+        <li><strong>Logística e transporte</strong> — ambientes críticos e conectividade.</li>
         <li><strong>Escritórios administrativos</strong> — suporte em TI e segurança da informação.</li>
     </ul>
 </section>
@@ -122,10 +122,31 @@
 <section id="contato">
     <h2>Contato</h2>
 
-    <form action="https://formspree.io/f/SEU_ID_AQUI" method="POST">
+    <form action="https://formspree.io/f/xaqndrqw" method="POST">
+
         <input type="text" name="nome" placeholder="Nome" required>
+
         <input type="email" name="email" placeholder="E-mail" required>
-        <textarea name="mensagem" rows="4" placeholder="Mensagem" required></textarea>
+
+        <select name="tipo_empresa" required>
+            <option value="">Tipo de empresa</option>
+            <option>Instituição de ensino</option>
+            <option>Empresa de serviços</option>
+            <option>Comércio / Varejo</option>
+            <option>Condomínio</option>
+            <option>Outro</option>
+        </select>
+
+        <select name="necessidade" required>
+            <option value="">Principal necessidade</option>
+            <option>Suporte técnico</option>
+            <option>Firewall / Segurança</option>
+            <option>Redes / Infraestrutura</option>
+            <option>Manutenção de computadores</option>
+        </select>
+
+        <textarea name="mensagem" rows="4" placeholder="Descreva brevemente sua necessidade" required></textarea>
+
         <button type="submit">Enviar</button>
     </form>
 </section>
@@ -135,7 +156,11 @@
     <p>WhatsApp: (21) 97945-0236</p>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/5521979450236" target="_blank" aria-label="WhatsApp">
+<!-- WHATSAPP COM MENSAGEM AUTOMÁTICA -->
+<a class="whatsapp"
+   href="https://wa.me/5521979450236?text=Olá,%20gostaria%20de%20informações%20sobre%20suporte%20em%20TI%20para%20minha%20empresa."
+   target="_blank"
+   aria-label="WhatsApp">
     <i class="fab fa-whatsapp"></i>
 </a>
 
