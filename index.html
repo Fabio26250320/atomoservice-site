@@ -1,268 +1,205 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- META BÁSICO -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="google-site-verification" content="fZs-EMviZVH9gf61iAb4mFPZQcLDY-ZgO_NluJCTodA" />
+    <!-- GOOGLE SEARCH CONSOLE (cole seu código quando gerar) -->
+    <!--
+    <meta name="google-site-verification" content="COLE_AQUI">
+    -->
 
-    <!-- SEO GERAL -->
-    <title>Átomo Service Informática | Suporte, Redes, Firewall e Infraestrutura</title>
-    <meta name="description" content="Suporte técnico em TI no Rio de Janeiro. Firewall, redes, cabeamento estruturado, infraestrutura, suporte presencial e remoto.">
-    <meta name="keywords" content="suporte técnico, informática, firewall, redes, cabeamento, infraestrutura, TI empresarial, Rio de Janeiro">
-    <meta name="author" content="Átomo Service Informática">
+    <!-- SEO -->
+    <title>Suporte em TI no Rio de Janeiro | Átomo Service Informática</title>
+    <meta name="description" content="Suporte técnico em TI no Rio de Janeiro. Firewall, redes, cabeamento estruturado, infraestrutura e suporte presencial e remoto para empresas.">
 
-    <!-- SEO LOCAL -->
-    <meta name="geo.region" content="BR-RJ">
-    <meta name="geo.placename" content="Rio de Janeiro">
-    <meta name="geo.position" content="-22.9068;-43.1729">
-    <meta name="ICBM" content="-22.9068, -43.1729">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- SCHEMA.ORG -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Átomo Service Informática",
+      "image": "https://fabio26250320.github.io/atomoservice-site/imagens/logoatomo_1.jpeg",
+      "telephone": "+5521979450236",
+      "email": "atomoserviceinformatica@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Rio de Janeiro",
+        "addressRegion": "RJ",
+        "addressCountry": "BR"
+      },
+      "url": "https://fabio26250320.github.io/atomoservice-site/"
+    }
+    </script>
 
     <style>
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f6f8;
-            color: #333;
+            font-family: 'Inter', sans-serif;
+            color: #222;
+            background: #f5f6f8;
         }
 
-        /* MENU FIXO */
-        nav {
-            background-color: #062c43;
-            position: sticky;
+        header {
+            position: fixed;
             top: 0;
+            width: 100%;
+            background: #0b1c2d;
+            padding: 12px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             z-index: 1000;
         }
 
-        .nav-container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 12px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        header img {
+            height: 45px;
         }
 
-        .nav-container a {
+        nav a {
             color: #fff;
-            text-decoration: none;
-            font-weight: bold;
             margin-left: 20px;
-            font-size: 14px;
+            text-decoration: none;
+            font-weight: 500;
         }
 
-        /* HEADER */
-        header {
-            background-color: #0b3c5d;
-            color: #fff;
-            padding: 20px;
+        nav a:hover {
+            text-decoration: underline;
         }
 
-        .header-container {
+        section {
+            padding: 100px 40px 60px;
             max-width: 1100px;
             margin: auto;
-            display: flex;
-            align-items: center;
+        }
+
+        h1, h2 {
+            color: #0b1c2d;
+        }
+
+        .hero {
+            background: #ffffff;
+            text-align: center;
+            padding-top: 140px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
         }
 
-        .header-container img {
-            width: 130px;
+        .card {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
         }
 
-        .header-text h1 {
-            margin: 0;
-            font-size: 26px;
-        }
-
-        .header-text p {
-            margin: 5px 0 0;
-            font-size: 14px;
-        }
-
-        /* SEÇÕES */
-        section {
-            max-width: 1100px;
-            margin: auto;
-            padding: 40px 20px;
-        }
-
-        h2 {
-            color: #0b3c5d;
-        }
-
-        ul {
-            line-height: 1.8;
-        }
-
-        /* BOTÕES */
-        .cta {
-            margin-top: 20px;
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 14px 24px;
-            border-radius: 5px;
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-        }
-
-        .btn-whatsapp { background: #25d366; }
-        .btn-email { background: #0072c6; }
-
-        /* FORMULÁRIO */
         form {
-            background: #fff;
-            padding: 30px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,.1);
-            margin-top: 30px;
+            display: grid;
+            gap: 12px;
         }
 
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0 20px;
-            border-radius: 4px;
+        input, textarea, button {
+            padding: 12px;
+            font-size: 15px;
+            border-radius: 6px;
             border: 1px solid #ccc;
         }
 
         button {
-            background: #0b3c5d;
+            background: #0b1c2d;
             color: #fff;
-            padding: 12px 25px;
             border: none;
-            border-radius: 5px;
-            font-size: 16px;
             cursor: pointer;
         }
 
-        /* FOOTER */
         footer {
-            background: #eaeaea;
+            background: #0b1c2d;
+            color: #fff;
             text-align: center;
             padding: 20px;
-            font-size: 14px;
         }
 
-        /* WHATSAPP FLUTUANTE */
-        .whatsapp-float {
+        /* WhatsApp Button */
+        .whatsapp {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 25px;
+            right: 25px;
             background: #25d366;
             color: #fff;
-            padding: 12px 18px;
-            border-radius: 50px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            font-weight: bold;
+            padding: 14px 16px;
+            border-radius: 50%;
+            font-size: 26px;
             z-index: 999;
-            box-shadow: 0 4px 8px rgba(0,0,0,.3);
+            text-decoration: none;
         }
 
-        .whatsapp-float svg {
-            width: 22px;
-            height: 22px;
-            fill: white;
-        }
-
-        /* RESPONSIVO */
-        @media (max-width: 700px) {
-            .header-container {
-                flex-direction: column;
-                text-align: center;
-            }
-            .nav-container {
-                flex-direction: column;
-            }
+        .whatsapp:hover {
+            background: #1ebe5d;
         }
     </style>
 </head>
 
 <body>
 
-<!-- MENU -->
-<nav>
-    <div class="nav-container">
-        <strong>Átomo Service Informática</strong>
-        <div>
-            <a href="#quem-somos">Quem Somos</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#contato">Contato</a>
-        </div>
-    </div>
-</nav>
-
-<!-- HEADER -->
 <header>
-    <div class="header-container">
-        <img src="imagens/logoatomo_1.jpeg" alt="Átomo Service Informática">
-        <div class="header-text">
-            <h1>Átomo Service Informática</h1>
-            <p>Não é custo, é investimento</p>
-        </div>
-    </div>
+    <img src="imagens/logoatomo_1.jpeg" alt="Átomo Service Informática">
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+    </nav>
 </header>
 
-<section id="quem-somos">
-    <h2>Quem Somos</h2>
+<section class="hero" id="inicio">
+    <h1>Átomo Service Informática</h1>
     <p>
-        A <strong>Átomo Service Informática</strong> oferece soluções completas de TI para
-        empresas e instituições educacionais no <strong>Rio de Janeiro</strong>, com foco em
-        segurança, desempenho e continuidade operacional.
+        Atendemos empresas e instituições de ensino no <strong>Rio de Janeiro</strong>,
+        oferecendo suporte técnico em TI, firewall, redes, cabeamento estruturado
+        e infraestrutura de tecnologia da informação.
     </p>
 </section>
 
 <section id="servicos">
     <h2>Serviços</h2>
-    <ul>
-        <li>Firewall e Segurança da Informação</li>
-        <li>Administração de Redes e Sistemas</li>
-        <li>Infraestrutura e Cabeamento Estruturado</li>
-        <li>Fibra Óptica</li>
-        <li>Manutenção e Formatação de Computadores</li>
-        <li>Consultoria em TI</li>
-        <li>Suporte Técnico Presencial e Remoto</li>
-        <li>CFTV</li>
-    </ul>
+    <div class="services">
+        <div class="card">Suporte Técnico Presencial e Remoto</div>
+        <div class="card">Firewall e Segurança da Informação</div>
+        <div class="card">Administração de Redes e Sistemas</div>
+        <div class="card">Infraestrutura e Cabeamento Estruturado</div>
+        <div class="card">Fibra Óptica</div>
+        <div class="card">Consultoria em TI</div>
+        <div class="card">CFTV</div>
+    </div>
 </section>
 
 <section id="contato">
     <h2>Contato</h2>
-
-    <div class="cta">
-        <a class="btn btn-whatsapp" href="https://wa.me/5521979450236" target="_blank">WhatsApp</a>
-        <a class="btn btn-email" href="mailto:atomoserviceinformatica@gmail.com">E-mail</a>
-    </div>
-
-    <!-- FORMULÁRIO FUNCIONAL -->
     <form action="https://formspree.io/f/SEU_ID_AQUI" method="POST">
-        <input type="text" name="nome" placeholder="Seu nome" required>
-        <input type="email" name="email" placeholder="Seu e-mail" required>
-        <textarea name="mensagem" rows="5" placeholder="Mensagem" required></textarea>
+        <input type="text" name="nome" placeholder="Nome" required>
+        <input type="email" name="email" placeholder="E-mail" required>
+        <textarea name="mensagem" placeholder="Mensagem" rows="4" required></textarea>
         <button type="submit">Enviar</button>
     </form>
 </section>
 
 <footer>
-    © 2026 Átomo Service Informática • Rio de Janeiro • (21) 97945-0236
+    <p>© 2026 Átomo Service Informática — Rio de Janeiro</p>
+    <p>WhatsApp: (21) 97945-0236 | atomoserviceinformatica@gmail.com</p>
 </footer>
 
-<!-- WHATSAPP FLUTUANTE -->
-<a class="whatsapp-float" href="https://wa.me/5521979450236" target="_blank" aria-label="WhatsApp">
-    <svg viewBox="0 0 32 32">
-        <path d="M16 2.4C8.5 2.4 2.4 8.5 2.4 16c0 2.8.7 5.5 2.1 7.9L2 30l6.3-2.4c2.3 1.3 4.9 2 7.7 2 7.5 0 13.6-6.1 13.6-13.6S23.5 2.4 16 2.4z"/>
-        <path d="M23.2 19.6c-.4-.2-2.3-1.1-2.6-1.2-.3-.1-.6-.2-.9.2-.3.4-1 1.2-1.2 1.4-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3.1-2-1.2-1.1-2-2.4-2.3-2.8-.2-.4 0-.6.2-.8"/>
-    </svg>
-    WhatsApp
+<a class="whatsapp" href="https://wa.me/5521979450236" target="_blank">
+    <i class="fab fa-whatsapp"></i>
 </a>
 
 </body>
