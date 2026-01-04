@@ -1,53 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suporte em TI no RJ | Átomo Service Informática</title>
-    <meta name="description" content="Suporte técnico em TI no Rio de Janeiro. Firewall, redes, servidores, cabeamento estruturado e suporte presencial e remoto para empresas.">
-    <meta name="author" content="Átomo Service Informática">
-
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suporte em TI no RJ | Átomo Service Informática</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-<header>
-    <img src="imagens/logoatomo1.jpg" alt="Átomo Service Informática">
-    <nav>
+<!-- MENU FIXO -->
+<header class="menu-flutuante" id="header">
+    <div class="menu-left">
+        <img src="imagens/logoatomo_1.jpg" alt="Átomo Service Informática">
+    </div>
+    <nav class="menu-center" id="nav-links">
         <a href="#inicio">Início</a>
         <a href="#servicos">Serviços</a>
         <a href="#clientes">Clientes</a>
         <a href="#contato">Contato</a>
     </nav>
+    <div class="menu-right">
+        <a class="btn-whatsapp" href="https://wa.me/5521979450236" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
 </header>
 
-<section id="inicio" class="hero">
-    <h1>Átomo Service Informática</h1>
-    <p>Soluções completas em Tecnologia da Informação para empresas no <strong>Rio de Janeiro</strong>.</p>
+<main>
+<!-- HERO COM PARTÍCULAS INTERATIVAS -->
+<section id="inicio" class="hero animate fade-up">
+    <canvas id="particles"></canvas>
+    <div class="hero-bg"></div>
+    <div class="hero-content animate fade-up delay">
+        <h1>Átomo Service Informática</h1>
+        <p>Conectamos sua empresa ao futuro: soluções completas de TI que garantem segurança, performance e inovação para o seu negócio crescer sem limites.</p>
+        <a href="#contato" class="btn-primary animate fade-up delay2">Fale Conosco</a>
+    </div>
 </section>
 
-<section id="servicos" class="watermark-section">
+<!-- SERVIÇOS -->
+<section id="servicos" class="watermark animate fade-up">
+    <div class="watermark-bg"></div>
     <h2>Serviços</h2>
     <div class="services">
-        <div class="card">
+        <div class="card animate fade-left">
             <img src="imagens/manutencao-servidores.jpg" alt="Suporte Técnico">
             <div class="card-content">
                 <h3>Suporte Técnico</h3>
                 <p>Manutenção, formatação e suporte presencial e remoto.</p>
             </div>
         </div>
-
-        <div class="card">
+        <div class="card animate fade-up">
             <img src="imagens/firewall-seguranca.jpg" alt="Firewall e Segurança">
             <div class="card-content">
                 <h3>Firewall e Segurança</h3>
                 <p>Proteção de rede, VPN e controle de acessos.</p>
             </div>
         </div>
-
-        <div class="card">
+        <div class="card animate fade-right">
             <img src="imagens/redes-servidores.jpg" alt="Infraestrutura">
             <div class="card-content">
                 <h3>Infraestrutura</h3>
@@ -57,12 +69,24 @@
     </div>
 </section>
 
-<section id="clientes" class="watermark-section">
-    <h2>Clientes</h2>
-    <p>Atendemos empresas, escolas, comércios, condomínios e escritórios.</p>
+<!-- CLIENTES -->
+<section id="clientes" class="watermark animate fade-up">
+    <div class="watermark-bg"></div>
+    <h2>Clientes e Parceiros</h2>
+    <p>Atendemos empresas de todos os portes, instituições de ensino, comércios, condomínios, escritórios, órgãos públicos e organizações privadas. Nossas soluções de TI são personalizadas, seguras e eficientes, ajudando cada cliente a inovar e crescer com tecnologia confiável.</p>
+    <div class="clients-grid">
+        <div class="client-item animate fade-left"><i class="fas fa-building"></i><span>Empresas</span></div>
+        <div class="client-item animate fade-up"><i class="fas fa-school"></i><span>Escolas e Universidades</span></div>
+        <div class="client-item animate fade-right"><i class="fas fa-store"></i><span>Comércios</span></div>
+        <div class="client-item animate fade-left"><i class="fas fa-city"></i><span>Condomínios</span></div>
+        <div class="client-item animate fade-up"><i class="fas fa-briefcase"></i><span>Escritórios</span></div>
+        <div class="client-item animate fade-right"><i class="fas fa-landmark"></i><span>Órgãos Públicos</span></div>
+    </div>
 </section>
 
-<section id="contato" class="watermark-section">
+<!-- CONTATO -->
+<section id="contato" class="watermark animate fade-up">
+    <div class="watermark-bg"></div>
     <h2>Contato</h2>
     <form action="https://formspree.io/f/xaqndrqw" method="POST">
         <input type="text" name="nome" placeholder="Nome" required>
@@ -71,16 +95,98 @@
         <button type="submit">Enviar</button>
     </form>
 </section>
+</main>
 
 <footer>
     <p>© 2026 Átomo Service Informática — Rio de Janeiro</p>
 </footer>
 
-<a class="whatsapp"
-   href="https://wa.me/5521979450236"
-   target="_blank">
-    <i class="fab fa-whatsapp"></i>
-</a>
+<script>
+// Scrollspy e animações
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('#nav-links a');
+const header = document.getElementById('header');
 
+window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if(pageYOffset >= sectionTop) current = section.getAttribute('id');
+    });
+    navLinks.forEach(link => link.classList.remove('active'));
+    navLinks.forEach(link => {
+        if(link.getAttribute('href') === '#' + current) link.classList.add('active');
+    });
+
+    if(window.scrollY > 50){ header.classList.add('solid'); }
+    else{ header.classList.remove('solid'); }
+
+    document.querySelectorAll('.animate').forEach(el => {
+        const elTop = el.getBoundingClientRect().top;
+        if(elTop < window.innerHeight - 100) el.classList.add('show');
+    });
+});
+
+// PARTICULAS INTERATIVAS HERO
+const canvas = document.getElementById('particles');
+const ctx = canvas.getContext('2d');
+let particlesArray;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight*0.8;
+
+const mouse = { x:null, y:null, radius:120 };
+window.addEventListener('mousemove',(e)=>{ mouse.x=e.x; mouse.y=e.y; });
+
+class Particle {
+    constructor(){
+        this.x = Math.random()*canvas.width;
+        this.y = Math.random()*canvas.height;
+        this.size = Math.random()*2+1;
+        this.speedX = Math.random()*1-0.5;
+        this.speedY = Math.random()*1-0.5;
+    }
+    update(){
+        this.x += this.speedX;
+        this.y += this.speedY;
+        if(this.x>canvas.width)this.x=0;
+        if(this.x<0)this.x=canvas.width;
+        if(this.y>canvas.height)this.y=0;
+        if(this.y<0)this.y=canvas.height;
+        let dx=this.x-mouse.x, dy=this.y-mouse.y, dist=Math.sqrt(dx*dx+dy*dy);
+        if(dist<mouse.radius){ this.x+=dx/10; this.y+=dy/10; }
+    }
+    draw(){
+        ctx.fillStyle='rgba(255,255,255,0.6)';
+        ctx.beginPath();
+        ctx.arc(this.x,this.y,this.size,0,Math.PI*2);
+        ctx.fill();
+    }
+}
+
+function connect(){
+    for(let a=0;a<particlesArray.length;a++){
+        for(let b=a;b<particlesArray.length;b++){
+            let dx=particlesArray[a].x-particlesArray[b].x;
+            let dy=particlesArray[a].y-particlesArray[b].y;
+            let distance=Math.sqrt(dx*dx+dy*dy);
+            if(distance<120){
+                ctx.strokeStyle='rgba(255,255,255,'+(1-distance/120)+')';
+                ctx.lineWidth=1;
+                ctx.beginPath();
+                ctx.moveTo(particlesArray[a].x,particlesArray[a].y);
+                ctx.lineTo(particlesArray[b].x,particlesArray[b].y);
+                ctx.stroke();
+            }
+        }
+    }
+}
+
+function initParticles(){ particlesArray=[]; for(let i=0;i<100;i++) particlesArray.push(new Particle()); }
+function animateParticles(){ ctx.clearRect(0,0,canvas.width,canvas.height); particlesArray.forEach(p=>{p.update();p.draw();}); connect(); requestAnimationFrame(animateParticles); }
+initParticles();
+animateParticles();
+window.addEventListener('resize',()=>{ canvas.width=window.innerWidth; canvas.height=window.innerHeight*0.8; initParticles(); });
+</script>
 </body>
 </html>
+
