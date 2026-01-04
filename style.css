@@ -71,35 +71,32 @@ section {
     border-radius: 12px;
 }
 
-/* ================= FUNDO COM LOGO ================= */
-/* Aparece somente a partir da seção Serviços */
-
+/* ================= FUNDO COM LOGO COMO MARCA-D’ÁGUA ================= */
 #servicos,
 #clientes,
 #contato {
     position: relative;
     background-color: #ffffff;
+    overflow: hidden;
 }
 
-/* Fundo ocupa TODA a largura da tela */
 #servicos::before,
 #clientes::before,
 #contato::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 50%;
-    width: 100vw;
-    height: 100%;
-    transform: translateX(-50%);
+    width: 150%; /* ocupa toda a largura da seção */
+    height: 150%; /* ocupa toda a altura da seção */
+    transform: translate(-50%, -50%);
     background: url("imagens/logoatomo1.jpg") no-repeat center;
     background-size: contain;
-    opacity: 0.04;
+    opacity: 0.05; /* discreta */
     z-index: 0;
     pointer-events: none;
 }
 
-/* Conteúdo sempre acima do fundo */
 #servicos > *,
 #clientes > *,
 #contato > * {
@@ -213,7 +210,8 @@ footer {
     #servicos::before,
     #clientes::before,
     #contato::before {
-        background-size: 80%;
+        width: 200%;
+        height: 200%;
         opacity: 0.03;
     }
 }
