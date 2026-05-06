@@ -6,25 +6,25 @@ body{
     overflow-x:hidden;
 }
 
-/* LUZ CINEMATOGRÁFICA */
-.light{
+/* LUZ AMBIENTE (TIPO VISION PRO) */
+.ambient-light{
     position:fixed;
-    width:800px;
-    height:800px;
-    background:radial-gradient(circle, rgba(34,197,94,0.12), transparent 60%);
+    width:900px;
+    height:900px;
+    background:radial-gradient(circle, rgba(0,255,150,0.08), transparent 60%);
+    filter:blur(120px);
     top:-200px;
     left:-200px;
-    filter:blur(100px);
+    animation:float 14s infinite alternate ease-in-out;
     z-index:-1;
-    animation:float 12s infinite alternate ease-in-out;
 }
 
 @keyframes float{
     0%{transform:translate(0,0);}
-    100%{transform:translate(300px,200px);}
+    100%{transform:translate(300px,250px);}
 }
 
-/* NAV GLASS */
+/* NAV GLASS EXTREMO */
 .nav{
     position:fixed;
     width:100%;
@@ -32,8 +32,8 @@ body{
     justify-content:space-between;
     align-items:center;
     padding:18px 50px;
-    background:rgba(0,0,0,0.4);
-    backdrop-filter:blur(25px);
+    background:rgba(0,0,0,0.35);
+    backdrop-filter:blur(30px);
     border-bottom:1px solid rgba(255,255,255,0.05);
     z-index:1000;
 }
@@ -58,14 +58,15 @@ body{
     font-weight:600;
 }
 
-/* KEYNOTE PANELS */
-.panel{
-    height:100vh;
+/* LAYERS (ESSÊNCIA VISION PRO) */
+.layer{
+    min-height:100vh;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
-    padding:0 20px;
+    padding:120px 20px;
+    transform-style:preserve-3d;
 }
 
 /* CONTEÚDO */
@@ -73,13 +74,13 @@ body{
     max-width:900px;
 }
 
-/* TIPOGRAFIA APPLE */
+/* TIPOGRAFIA CINEMATOGRÁFICA */
 h1{
     font-size:64px;
     letter-spacing:-2px;
     line-height:1.05;
-    transform:scale(1.2);
     opacity:0;
+    transform:translateZ(60px) scale(1.1);
 }
 
 h2{
@@ -114,13 +115,12 @@ p{
     transform:scale(1.05);
 }
 
-/* ESTADOS */
+/* REVEAL SYSTEM */
 .show{
     opacity:1 !important;
-    transform:scale(1) translateY(0) !important;
+    transform:translateY(0) scale(1) !important;
 }
 
-/* FOOTER OCULTO ESTÉTICO */
-footer{
-    display:none;
-}
+/* DELAYS */
+.delay{transition-delay:0.2s;}
+.delay2{transition-delay:0.4s;}
