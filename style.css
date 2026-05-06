@@ -1,25 +1,25 @@
 body{
     margin:0;
     font-family:'Inter',sans-serif;
-    background:#05060a;
+    background:#000;
     color:#fff;
     overflow-x:hidden;
 }
 
 /* LUZ CINEMATOGRÁFICA */
-.cinematic-light{
+.light{
     position:fixed;
-    width:700px;
-    height:700px;
+    width:800px;
+    height:800px;
     background:radial-gradient(circle, rgba(34,197,94,0.12), transparent 60%);
     top:-200px;
     left:-200px;
-    filter:blur(90px);
-    animation:move 12s infinite alternate ease-in-out;
+    filter:blur(100px);
     z-index:-1;
+    animation:float 12s infinite alternate ease-in-out;
 }
 
-@keyframes move{
+@keyframes float{
     0%{transform:translate(0,0);}
     100%{transform:translate(300px,200px);}
 }
@@ -32,8 +32,8 @@ body{
     justify-content:space-between;
     align-items:center;
     padding:18px 50px;
-    background:rgba(0,0,0,0.3);
-    backdrop-filter:blur(22px);
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(25px);
     border-bottom:1px solid rgba(255,255,255,0.05);
     z-index:1000;
 }
@@ -45,6 +45,7 @@ body{
     margin:0 14px;
     text-decoration:none;
     font-size:14px;
+    transition:0.3s;
 }
 
 .nav nav a:hover{color:#fff;}
@@ -55,36 +56,43 @@ body{
     padding:10px 16px;
     border-radius:999px;
     font-weight:600;
-    text-decoration:none;
 }
 
-/* SCENES (ESTILO STORYTELLING APPLE) */
-.scene{
-    min-height:100vh;
+/* KEYNOTE PANELS */
+.panel{
+    height:100vh;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
-    padding:120px 20px;
+    padding:0 20px;
 }
 
-.scene-content{
+/* CONTEÚDO */
+.content{
     max-width:900px;
 }
 
-/* HERO CINEMATOGRÁFICO */
-.hero h1{
+/* TIPOGRAFIA APPLE */
+h1{
     font-size:64px;
     letter-spacing:-2px;
     line-height:1.05;
+    transform:scale(1.2);
     opacity:0;
-    transform:translateY(20px);
 }
 
-.hero p{
-    margin-top:20px;
+h2{
+    font-size:48px;
+    letter-spacing:-1px;
+    opacity:0;
+    transform:translateY(40px);
+}
+
+p{
     font-size:18px;
     color:#aaa;
+    margin-top:20px;
     opacity:0;
 }
 
@@ -106,50 +114,13 @@ body{
     transform:scale(1.05);
 }
 
-/* TITULOS */
-h2{
-    font-size:44px;
-    letter-spacing:-1px;
-    opacity:0;
-    transform:translateY(20px);
-}
-
-/* CARDS CINEMA */
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:18px;
-    margin-top:50px;
-}
-
-.card{
-    padding:28px;
-    border-radius:18px;
-    background:rgba(255,255,255,0.03);
-    border:1px solid rgba(255,255,255,0.06);
-    opacity:0;
-    transform:translateY(40px);
-    transition:0.6s;
-}
-
-.card:hover{
-    transform:translateY(-8px) scale(1.02);
-}
-
-/* REVEAL SYSTEM */
+/* ESTADOS */
 .show{
     opacity:1 !important;
-    transform:translateY(0) !important;
+    transform:scale(1) translateY(0) !important;
 }
 
-/* DELAYS */
-.delay{transition-delay:0.2s;}
-.delay2{transition-delay:0.4s;}
-
-/* FOOTER */
+/* FOOTER OCULTO ESTÉTICO */
 footer{
-    text-align:center;
-    padding:40px;
-    color:#666;
-    font-size:12px;
+    display:none;
 }
