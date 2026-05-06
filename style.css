@@ -1,278 +1,148 @@
-/* RESET */
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
-
 body{
+    margin:0;
     font-family:'Inter',sans-serif;
-    background:linear-gradient(180deg,#070d18,#0b1c2d);
-    color:#eaf0ff;
-    overflow-x:hidden;
-    position:relative;
-    line-height:1.6;
-}
-
-/* MARCA D'ÁGUA */
-body::before{
-    content:"";
-    position:fixed;
-    top:50%;
-    left:50%;
-    width:420px;
-    height:420px;
-    transform:translate(-50%,-50%);
-    background:url("imagens/logoatomo_1.jpg") no-repeat center;
-    background-size:contain;
-    opacity:0.04;
-    z-index:0;
-    pointer-events:none;
-    animation:floatLogo 8s ease-in-out infinite;
-}
-
-@keyframes floatLogo{
-    0%,100%{transform:translate(-50%,-50%) rotate(-2deg);}
-    50%{transform:translate(-50%,-50%) rotate(2deg);}
+    background:#070A12;
+    color:#E5E7EB;
 }
 
 /* HEADER */
 header{
     position:fixed;
-    top:0;
     width:100%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:14px 24px;
-    background:rgba(7,13,24,0.75);
-    backdrop-filter:blur(10px);
-    z-index:1000;
+    padding:18px 40px;
+    background:rgba(7,10,18,0.7);
+    backdrop-filter:blur(14px);
     border-bottom:1px solid rgba(255,255,255,0.05);
-}
-
-header.solid{
-    background:#070d18;
+    z-index:1000;
 }
 
 header img{
-    max-height:55px;
-}
-
-/* NAV */
-nav{
-    display:flex;
-    gap:18px;
-    flex-wrap:wrap;
+    height:42px;
 }
 
 nav a{
-    color:#cfd8ff;
+    color:#cbd5e1;
+    margin:0 12px;
     text-decoration:none;
     font-weight:500;
     transition:0.2s;
 }
 
 nav a:hover{
-    color:#25d366;
+    color:#22c55e;
 }
 
-/* WHATSAPP */
-.menu-right .btn-whatsapp{
-    background:#25d366;
-    color:#fff;
-    padding:11px 13px;
-    border-radius:50%;
-    font-size:20px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    animation:pulse 2s infinite;
-    box-shadow:0 8px 20px rgba(0,0,0,0.3);
-}
-
-@keyframes pulse{
-    0%,100%{transform:scale(1);}
-    50%{transform:scale(1.08);}
-}
-
-/* HERO */
+/* HERO SAAS */
 .hero{
-    min-height:95vh;
+    height:100vh;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
-    padding:100px 20px;
-    position:relative;
-}
-
-#particles{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    z-index:0;
+    padding:0 20px;
 }
 
 .hero-content{
-    position:relative;
-    z-index:1;
     max-width:900px;
 }
 
-.hero-content h1{
-    font-size:3.2rem;
+.hero h1{
+    font-size:56px;
     font-weight:700;
-    margin-bottom:20px;
-    color:#ffffff;
+    letter-spacing:-1px;
+    line-height:1.1;
 }
 
-.hero-content p{
-    font-size:1.15rem;
-    opacity:0.85;
-    margin-bottom:30px;
+.hero p{
+    margin-top:18px;
+    font-size:18px;
+    opacity:0.75;
+    max-width:650px;
+    margin-left:auto;
+    margin-right:auto;
 }
 
-/* BOTÕES */
-.btn-primary{
-    background:#25d366;
-    color:#0b1c2d;
+/* BUTTON */
+.btn{
+    margin-top:25px;
+    display:inline-block;
+    background:#22c55e;
+    color:#0b1220;
     padding:14px 26px;
     border-radius:12px;
     font-weight:700;
     text-decoration:none;
-    display:inline-block;
     transition:0.2s;
 }
 
-.btn-primary:hover{
+.btn:hover{
     transform:translateY(-2px);
-    background:#1fd060;
+    background:#1db954;
 }
 
-/* SEÇÕES */
+/* SECTIONS */
 section{
-    padding:120px 20px 70px;
+    padding:120px 20px;
     max-width:1100px;
     margin:auto;
-    position:relative;
-    z-index:1;
-}
-
-/* TÍTULOS PADRÃO */
-h2{
-    font-size:2.2rem;
-    margin-bottom:20px;
     text-align:center;
-    color:#ffffff;
 }
 
-/* SERVIÇOS */
-.services{
+/* TITLES */
+h2{
+    font-size:34px;
+    margin-bottom:40px;
+    font-weight:600;
+}
+
+/* CARDS (GLASS STYLE SaaS) */
+.cards{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:22px;
+    gap:20px;
 }
 
 .card{
-    background:rgba(255,255,255,0.06);
-    border:1px solid rgba(255,255,255,0.08);
-    border-radius:14px;
-    overflow:hidden;
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.06);
+    padding:26px;
+    border-radius:16px;
+    backdrop-filter:blur(12px);
     transition:0.3s;
-    backdrop-filter:blur(8px);
 }
 
 .card:hover{
-    transform:translateY(-8px);
-    border-color:rgba(37,211,102,0.4);
+    transform:translateY(-6px);
+    border-color:rgba(34,197,94,0.4);
 }
 
-.card img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
+.card h3{
+    margin-bottom:10px;
 }
 
-.card-content{
-    padding:18px;
+.card p{
+    opacity:0.75;
 }
 
-.card-content h3{
-    margin-bottom:8px;
-    color:#fff;
-}
-
-.card-content p{
-    opacity:0.8;
-}
-
-/* CLIENTES */
-.clients-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-    gap:15px;
-    margin-top:30px;
-}
-
-.client-item{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    color:#cfd8ff;
-    font-size:0.95rem;
-}
-
-.client-item i{
-    font-size:30px;
-    color:#25d366;
-    margin-bottom:8px;
-}
-
-/* FORM */
-form{
-    max-width:520px;
-    margin:auto;
-    display:grid;
-    gap:12px;
-}
-
-input,textarea{
-    padding:12px;
-    border-radius:10px;
-    border:1px solid rgba(255,255,255,0.15);
-    background:rgba(255,255,255,0.05);
-    color:#fff;
-    outline:none;
-}
-
-button{
-    padding:14px;
-    border:none;
-    border-radius:10px;
-    background:#25d366;
+/* WHATSAPP */
+.whatsapp-float{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#22c55e;
+    color:#000;
+    padding:14px 18px;
+    border-radius:50px;
     font-weight:700;
-    cursor:pointer;
+    text-decoration:none;
 }
 
 /* FOOTER */
 footer{
     text-align:center;
-    padding:25px;
-    background:#050a14;
-    opacity:0.8;
-}
-
-/* RESPONSIVO */
-@media(max-width:768px){
-    header{
-        flex-direction:column;
-        gap:10px;
-    }
-
-    .hero-content h1{
-        font-size:2.2rem;
-    }
+    padding:30px;
+    opacity:0.6;
 }
