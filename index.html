@@ -4,9 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Automação, Suporte e Infraestrutura de TI para Empresas | Átomo Service</title>
+<title>Suporte de TI para Empresas no RJ | Automação e Infraestrutura | Átomo Service</title>
 
-<meta name="description" content="Soluções de TI para empresas: automação de processos, suporte técnico e infraestrutura para reduzir custos e aumentar produtividade.">
+<meta name="description" content="Suporte de TI para empresas no Rio de Janeiro. Automação de processos, infraestrutura e redução de custos com tecnologia. Atendimento rápido via WhatsApp.">
+
+<meta name="keywords" content="suporte de TI RJ, automação empresarial, infraestrutura de TI, TI para empresas, suporte técnico RJ">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -18,16 +20,16 @@ body{
     color:#fff;
 }
 
+/* HEADER */
 header{
     position:fixed;
-    top:0;
     width:100%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 40px;
-    background:rgba(11,18,32,0.7);
-    backdrop-filter:blur(12px);
+    padding:15px 30px;
+    background:rgba(11,18,32,0.85);
+    backdrop-filter:blur(10px);
     z-index:1000;
 }
 
@@ -47,8 +49,10 @@ nav a{
     border-radius:8px;
     font-weight:bold;
     text-decoration:none;
+    display:inline-block;
 }
 
+/* HERO */
 .hero{
     height:100vh;
     display:flex;
@@ -71,6 +75,7 @@ nav a{
     opacity:0.9;
 }
 
+/* SEÇÕES */
 section{
     padding:90px 20px;
     text-align:center;
@@ -92,16 +97,21 @@ section{
     border:1px solid rgba(255,255,255,0.08);
 }
 
-.badge{
-    display:inline-block;
-    background:#22c55e;
+/* CTA FIXO */
+.whatsapp-float{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25d366;
     color:#000;
-    padding:6px 12px;
-    border-radius:20px;
-    font-size:12px;
-    margin-bottom:15px;
+    padding:15px 18px;
+    border-radius:50px;
+    font-weight:bold;
+    text-decoration:none;
+    z-index:999;
 }
 
+/* FOOTER */
 footer{
     padding:30px;
     text-align:center;
@@ -115,27 +125,30 @@ footer{
 <body>
 
 <header>
-    <img src="imagens/logoatomo_1.jpg">
+    <img src="imagens/logoatomo_1.jpg" alt="Átomo Service">
+    
     <nav>
-        <a href="#inicio">Início</a>
         <a href="#servicos">Serviços</a>
         <a href="#beneficios">Resultados</a>
         <a href="#contato">Contato</a>
     </nav>
-    <a class="btn" href="https://wa.me/5521979450236">WhatsApp</a>
+
+    <a class="btn" href="https://wa.me/5521979450236" target="_blank">
+        WhatsApp
+    </a>
 </header>
 
 <!-- HERO -->
-<section id="inicio" class="hero">
-    <span class="badge">Soluções de TI para Empresas</span>
-
-    <h1>Reduza custos e aumente a produtividade da sua empresa com tecnologia inteligente</h1>
+<section class="hero">
+    <h1>Reduza custos e aumente a produtividade da sua empresa com TI profissional</h1>
 
     <p>
-        Automatizamos processos, estruturamos sua TI e resolvemos problemas que travam o crescimento do seu negócio.
+        Suporte técnico, automação de processos e infraestrutura de TI para empresas no Rio de Janeiro.
     </p>
 
-    <a class="btn" href="https://wa.me/5521979450236">Solicitar diagnóstico gratuito</a>
+    <a class="btn" href="https://wa.me/5521979450236">
+        Quero um diagnóstico gratuito
+    </a>
 </section>
 
 <!-- SERVIÇOS -->
@@ -145,18 +158,18 @@ footer{
     <div class="cards">
 
         <div class="card">
-            <h3>Suporte Técnico</h3>
-            <p>Atendimento rápido para manter sua empresa sempre funcionando.</p>
+            <h3>Suporte de TI</h3>
+            <p>Resolução rápida de problemas e manutenção de sistemas.</p>
         </div>
 
         <div class="card">
-            <h3>Automação de Processos</h3>
-            <p>Eliminamos tarefas manuais e melhoramos eficiência operacional.</p>
+            <h3>Automação</h3>
+            <p>Redução de tarefas manuais e aumento de eficiência.</p>
         </div>
 
         <div class="card">
-            <h3>Infraestrutura de TI</h3>
-            <p>Redes, servidores e estrutura completa para empresas.</p>
+            <h3>Infraestrutura</h3>
+            <p>Redes, servidores e estabilidade para sua empresa.</p>
         </div>
 
     </div>
@@ -164,49 +177,43 @@ footer{
 
 <!-- BENEFÍCIOS -->
 <section id="beneficios">
-    <h2>Resultados que entregamos</h2>
+    <h2>Resultados para sua empresa</h2>
 
     <div class="cards">
 
         <div class="card">
             <h3>Menos custos</h3>
-            <p>Redução de gastos com processos ineficientes.</p>
+            <p>Redução de desperdícios operacionais.</p>
         </div>
 
         <div class="card">
             <h3>Mais produtividade</h3>
-            <p>Equipe focada no que realmente importa.</p>
+            <p>Equipe trabalhando sem travamentos e interrupções.</p>
         </div>
 
         <div class="card">
             <h3>Mais segurança</h3>
-            <p>Proteção contra falhas e ataques.</p>
+            <p>Proteção contra falhas e perda de dados.</p>
         </div>
 
     </div>
 </section>
 
-<!-- CONFIANÇA -->
-<section>
-    <h2>Por que escolher a Átomo Service?</h2>
-
-    <p>✔ Atendimento especializado em empresas</p>
-    <p>✔ Soluções sob medida</p>
-    <p>✔ Foco em resultado e eficiência</p>
-    <p>✔ Suporte rápido e direto</p>
-
-    <br>
-    <a class="btn" href="https://wa.me/5521979450236">Falar com especialista</a>
-</section>
-
 <!-- CONTATO -->
 <section id="contato">
-    <h2>Vamos falar sobre sua empresa?</h2>
+    <h2>Fale com um especialista</h2>
 
-    <p>Respondemos rapidamente no WhatsApp.</p>
+    <p>Atendimento rápido via WhatsApp</p>
 
-    <a class="btn" href="https://wa.me/5521979450236">Iniciar conversa</a>
+    <a class="btn" href="https://wa.me/5521979450236">
+        Iniciar conversa
+    </a>
 </section>
+
+<!-- WHATSAPP FLUTUANTE -->
+<a class="whatsapp-float" href="https://wa.me/5521979450236" target="_blank">
+    WhatsApp
+</a>
 
 <footer>
     <p>© 2026 Átomo Service Informática — Rio de Janeiro</p>
