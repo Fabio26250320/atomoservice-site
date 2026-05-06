@@ -1,4 +1,4 @@
-const elements = document.querySelectorAll('.reveal, h2, h1, p, .card, .cta-main');
+const elements = document.querySelectorAll('h1, h2, p, .cta-main');
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -6,12 +6,13 @@ const observer = new IntersectionObserver(entries => {
             entry.target.classList.add('show');
         }
     });
-},{threshold:0.15});
+},{threshold:0.4});
 
 elements.forEach(el => observer.observe(el));
 
-/* PARALLAX LEVE (EFEITO APPLE) */
-document.addEventListener('mousemove', (e) => {
-    const light = document.querySelector('.cinematic-light');
-    light.style.transform = `translate(${e.clientX/25}px, ${e.clientY/25}px)`;
+/* EFEITO APPLE: zoom suave no scroll */
+window.addEventListener('scroll', () => {
+    const hero = document.querySelector('h1');
+    let scale = 1 + window.scrollY / 2000;
+    hero.style.transform = `scale(${Math.max(1, 1.2 - scale * 0.2)})`;
 });
