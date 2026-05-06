@@ -1,4 +1,4 @@
-const elements = document.querySelectorAll('.reveal');
+const elements = document.querySelectorAll('.reveal, h2, h1, p, .card, .cta-main');
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -10,10 +10,8 @@ const observer = new IntersectionObserver(entries => {
 
 elements.forEach(el => observer.observe(el));
 
-// movimento suave do glow com mouse (efeito premium)
+/* PARALLAX LEVE (EFEITO APPLE) */
 document.addEventListener('mousemove', (e) => {
-    const glow = document.querySelector('.bg-glow');
-    if(glow){
-        glow.style.transform = `translate(${e.clientX/20}px, ${e.clientY/20}px)`;
-    }
+    const light = document.querySelector('.cinematic-light');
+    light.style.transform = `translate(${e.clientX/25}px, ${e.clientY/25}px)`;
 });
