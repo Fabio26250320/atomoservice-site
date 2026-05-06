@@ -1,4 +1,4 @@
-const elements = document.querySelectorAll('h1, h2, p, .cta-main');
+const elements = document.querySelectorAll('.reveal, h1, h2, p, .cta-main');
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -6,13 +6,22 @@ const observer = new IntersectionObserver(entries => {
             entry.target.classList.add('show');
         }
     });
-},{threshold:0.4});
+},{threshold:0.3});
 
 elements.forEach(el => observer.observe(el));
 
-/* EFEITO APPLE: zoom suave no scroll */
+/* PARALLAX VISION PRO */
 window.addEventListener('scroll', () => {
+
+    const scroll = window.scrollY;
+
+    document.querySelectorAll('.layer').forEach((layer, i) => {
+        layer.style.transform = `translateY(${scroll * (i * 0.05)}px)`;
+    });
+
     const hero = document.querySelector('h1');
-    let scale = 1 + window.scrollY / 2000;
-    hero.style.transform = `scale(${Math.max(1, 1.2 - scale * 0.2)})`;
+    if(hero){
+        hero.style.transform = `scale(${1 + scroll / 3000})`;
+    }
+
 });
